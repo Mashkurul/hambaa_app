@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Main Info Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/surface"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/card_stroke"
+            app:strokeWidth="1dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Status badge -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_tag_pill"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    android:text="🟢 HEALTHY"
+                    android:textColor="@color/status_healthy"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- ID & Breed -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="#BD-104 • Holstein Friesian Cross"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp" />
+
+                <!-- Metadata -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📅 3.5 yrs  •  💧 Lactating (Mo 4)"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- 3 Metric Boxes -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/background"
+                    android:padding="12dp"
+                    android:weightSum="3">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Weight" android:textColor="@color/text_secondary" android:textSize="11sp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="460 kg" android:textColor="@color/text_primary" android:textSize="15sp" android:textStyle="bold" android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Daily Avg" android:textColor="@color/text_secondary" android:textSize="11sp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="24.5 L" android:textColor="@color/status_healthy" android:textSize="15sp" android:textStyle="bold" android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RFID" android:textColor="@color/text_secondary" android:textSize="11sp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="...412891" android:textColor="@color/text_primary" android:textSize="14sp" android:textStyle="bold" android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Tab / Filter Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginBottom="16dp">
+            <Button android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:backgroundTint="@color/primary_light" android:text="Overview" android:textColor="@color/primary_dark" android:textSize="12sp" app:cornerRadius="10dp" />
+            <Button android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:layout_marginHorizontal="2dp" android:backgroundTint="@color/surface" android:text="Milk" android:textColor="@color/text_secondary" android:textSize="12sp" app:cornerRadius="10dp" app:strokeColor="@color/card_stroke" app:strokeWidth="1dp" />
+            <Button android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:layout_marginHorizontal="2dp" android:backgroundTint="@color/surface" android:text="Health" android:textColor="@color/text_secondary" android:textSize="12sp" app:cornerRadius="10dp" app:strokeColor="@color/card_stroke" app:strokeWidth="1dp" />
+            <Button android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:layout_marginStart="4dp" android:backgroundTint="@color/surface" android:text="Feeding" android:textColor="@color/text_secondary" android:textSize="12sp" app:cornerRadius="10dp" app:strokeColor="@color/card_stroke" app:strokeWidth="1dp" />
+        </LinearLayout>
+
+        <!-- Today's Total Yield Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/surface"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/card_stroke"
+            app:strokeWidth="1dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Today's Total Yield"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_tag_pill"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="3dp"
+                        android:text="↗ +1.2L vs avg"
+                        android:textColor="@color/status_healthy"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24.5 Liters"
+                    android:textColor="@color/text_primary"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="🟢 Morning: 14.5 L" android:textColor="@color/text_secondary" android:textSize="12sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🟢 Evening: 10.0 L" android:textColor="@color/text_secondary" android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Progress bar -->
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:progress="60"
+                    android:progressTint="@color/primary"
+                    android:layout_marginBottom="4dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 2 Metrics Cards Side by Side -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginBottom="16dp">
+
+            <!-- Rumination Index -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:strokeColor="@color/card_stroke"
+                app:strokeWidth="1dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rumination Index" android:textColor="@color/text_secondary" android:textSize="12sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="482 min/day" android:textColor="@color/text_primary" android:textSize="16sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:background="@drawable/bg_tag_pill" android:paddingHorizontal="8dp" android:paddingVertical="2dp" android:text="Optimal" android:textColor="@color/status_healthy" android:textSize="11sp" android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Calved -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:strokeColor="@color/card_stroke"
+                app:strokeWidth="1dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Calved" android:textColor="@color/text_secondary" android:textSize="12sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Jun 14, 2024" android:textColor="@color/text_primary" android:textSize="16sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Sire: Pure HF #Bull-019" android:textColor="@color/text_secondary" android:textSize="11sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <!-- Health & Care Log Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardBackgroundColor="@color/surface"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/card_stroke"
+            app:strokeWidth="1dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🛡️ Health &amp; Care Log"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="All Up to Date 🟢"
+                        android:textColor="@color/status_healthy"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Item 1: FMD Booster -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background"
+                    android:padding="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FMD Booster" android:textColor="@color/text_primary" android:textSize="14sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sep 12, 2024" android:textColor="@color/text_secondary" android:textSize="12sp" />
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/bg_tag_pill" android:paddingHorizontal="10dp" android:paddingVertical="4dp" android:text="Completed" android:textColor="@color/status_healthy" android:textSize="12sp" android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Item 2: Deworming -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background"
+                    android:padding="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Deworming" android:textColor="@color/text_primary" android:textSize="14sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nov 5, 2024" android:textColor="@color/text_secondary" android:textSize="12sp" />
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="#FFF8E1" android:paddingHorizontal="10dp" android:paddingVertical="4dp" android:text="Due in 12d" android:textColor="#E65100" android:textSize="12sp" android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Vet Note Card -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#E8F5E9"
+                    android:padding="12dp"
+                    android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="VET NOTE • DR. ANIS" android:textColor="@color/primary_dark" android:textSize="11sp" android:textStyle="bold" android:layout_marginBottom="4dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="&quot;Udder condition supple, excellent appetite and active chewing cycle.&quot;" android:textColor="@color/text_primary" android:textSize="13sp" android:textStyle="italic" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Bottom Action Buttons -->
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:backgroundTint="@color/primary"
+            android:text="⊕ Record Milking"
+            android:textColor="@color/text_white"
+            android:textSize="16sp"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginBottom="24dp">
+            <Button
+                android:id="@+id/editDetailsButton"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:backgroundTint="@color/surface"
+                android:text="✎ Edit Details"
+                android:textColor="@color/primary_dark"
+                android:textSize="14sp"
+                app:cornerRadius="12dp"
+                app:strokeColor="@color/card_stroke"
+                app:strokeWidth="1dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:backgroundTint="@color/surface"
+                android:text="⌸ Health Card"
+                android:textColor="@color/primary_dark"
+                android:textSize="14sp"
+                app:cornerRadius="12dp"
+                app:strokeColor="@color/card_stroke"
+                app:strokeWidth="1dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

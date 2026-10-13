@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HAMBAA</string>
+    <string name="app_subtitle">AI-Based Cow Shed Management System</string>
+    <string name="email_hint">Email address</string>
+    <string name="password_hint">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login_button">Log In</string>
+    <string name="farm_name">Willow Creek Dairy Farm</string>
+    <string name="user_role">Senior Farm Supervisor</string>
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_cows">Cows</string>
+    <string name="nav_milk">Milk</string>
+    <string name="nav_feed">Feed</string>
+    <string name="nav_health">Health</string>
+    <string name="nav_employees">Employees</string>
+    <string name="nav_expenses">Expenses</string>
+    <string name="nav_sales">Sales</string>
+    <string name="nav_reports">Reports</string>
+    <string name="nav_ai">AI Insights</string>
+</resources>

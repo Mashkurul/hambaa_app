@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.SVGPath?>
+
+<BorderPane styleClass="login-root-pane" stylesheets="@/css/login.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hambaa.controller.LoginController">
+
+    <!-- Top Navigation Header -->
+    <top>
+        <HBox alignment="CENTER" styleClass="top-header-bar">
+            <padding>
+                <Insets bottom="12" left="24" right="24" top="12" />
+            </padding>
+            <children>
+                <!-- Quick Log Back Arrow Button -->
+                <Button fx:id="quickLogBackButton" onAction="#handleQuickLogBack" styleClass="header-back-button">
+                    <graphic>
+                        <HBox alignment="CENTER" spacing="6">
+                            <SVGPath content="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" styleClass="header-icon-svg" />
+                            <Label styleClass="header-title-label" text="Quick Log" />
+                        </HBox>
+                    </graphic>
+                </Button>
+
+                <Region HBox.hgrow="ALWAYS" />
+
+                <!-- User Profile Icon Button -->
+                <Button fx:id="userProfileButton" onAction="#handleUserProfileClick" styleClass="header-profile-button">
+                    <graphic>
+                        <StackPane styleClass="profile-avatar-circle">
+                            <SVGPath content="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" styleClass="profile-icon-svg" />
+                        </StackPane>
+                    </graphic>
+                </Button>
+            </children>
+        </HBox>
+    </top>
+
+    <!-- Main Content Area -->
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="main-scroll-pane">
+            <content>
+                <VBox alignment="CENTER" spacing="20" styleClass="content-wrapper">
+                    <padding>
+                        <Insets bottom="32" left="20" right="20" top="16" />
+                    </padding>
+                    <children>
+
+                        <!-- Branding Section -->
+                        <VBox alignment="CENTER" spacing="8" styleClass="branding-section">
+                            <children>
+                                <!-- Circular Mint Green Cow Logo -->
+                                <StackPane styleClass="logo-container">
+                                    <Circle radius="46" styleClass="logo-background-circle" />
+                                    <ImageView fitHeight="68" fitWidth="68" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@/images/hambaa-logo.png" />
+                                        </image>
+                                    </ImageView>
+                                    <!-- Green Status Indicator Dot -->
+                                    <Circle radius="7" styleClass="status-dot-circle" StackPane.alignment="BOTTOM_RIGHT">
+                                        <StackPane.margin>
+                                            <Insets bottom="4" right="8" />
+                                        </StackPane.margin>
+                                    </Circle>
+                                </StackPane>
+
+                                <!-- Title Row: HAMBAA + HERD OS Badge -->
+                                <HBox alignment="CENTER" spacing="10" styleClass="brand-title-box">
+                                    <Label styleClass="brand-title" text="HAMBAA" />
+                                    <Label styleClass="herd-os-badge" text="HERD OS" />
+                                </HBox>
+
+                                <!-- Subtitle -->
+                                <Label styleClass="brand-subtitle" text="Smarter Farming, Better Living." />
+                            </children>
+                        </VBox>
+
+                        <!-- Login Card -->
+                        <VBox spacing="18" styleClass="login-card">
+                            <children>
+
+                                <!-- Card Header -->
+                                <HBox alignment="TOP_LEFT">
+                                    <children>
+                                        <VBox spacing="4" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <Label styleClass="card-title" text="Welcome back" />
+                                                <Label styleClass="card-subtitle" text="Sign in to manage your dairy herd &amp; farm data" />
+                                            </children>
+                                        </VBox>
+
+                                        <!-- Active Farm Badge -->
+                                        <HBox alignment="CENTER" spacing="6" styleClass="active-farm-badge">
+                                            <Circle radius="3.5" styleClass="active-dot" />
+                                            <Label styleClass="active-farm-text" text="Active Farm" />
+                                        </HBox>
+                                    </children>
+                                </HBox>
+
+                                <!-- Email Address Input Field -->
+                                <VBox spacing="6">
+                                    <children>
+                                        <Label styleClass="input-label" text="Email Address" />
+                                        <TextField fx:id="emailField" promptText="herdmanager@willowcreek.farm" styleClass="text-input-field" />
+                                    </children>
+                                </VBox>
+
+                                <!-- Password Input Field -->
+                                <VBox spacing="6">
+                                    <children>
+                                        <Label styleClass="input-label" text="Password" />
+                                        <HBox alignment="CENTER_LEFT" styleClass="password-input-box">
+                                            <children>
+                                                <!-- Lock Icon -->
+                                                <SVGPath content="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" styleClass="input-icon-svg" />
+
+                                                <!-- Stacked Password Fields -->
+                                                <StackPane fx:id="passwordStackPane" HBox.hgrow="ALWAYS">
+                                                    <children>
+                                                        <PasswordField fx:id="passwordField" promptText="••••••••••" styleClass="inner-password-field" />
+                                                        <TextField fx:id="passwordVisibleField" promptText="123456" styleClass="inner-password-field" />
+                                                    </children>
+                                                </StackPane>
+
+                                                <!-- Eye Toggle Button -->
+                                                <Button fx:id="togglePasswordButton" onAction="#togglePasswordVisibility" styleClass="eye-toggle-button">
+                                                    <graphic>
+                                                        <SVGPath fx:id="eyeIconPath" content="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" styleClass="eye-icon-svg" />
+                                                    </graphic>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+
+                                <!-- Options Row: Remember Me & Forgot Password -->
+                                <HBox alignment="CENTER_LEFT">
+                                    <children>
+                                        <CheckBox fx:id="rememberMeCheckBox" styleClass="remember-checkbox" text="Remember me" />
+                                        <Region HBox.hgrow="ALWAYS" />
+                                        <Hyperlink fx:id="forgotPasswordLink" onAction="#handleForgotPassword" styleClass="forgot-password-link" text="Forgot Password?" />
+                                    </children>
+                                </HBox>
+
+                                <!-- Error Message Display -->
+                                <Label fx:id="errorLabel" styleClass="error-message-label" text="Invalid email or password." visible="false" />
+
+                                <!-- Log In Button -->
+                                <Button fx:id="loginButton" defaultButton="true" maxWidth="Infinity" onAction="#handleLogin" styleClass="login-primary-button">
+                                    <graphic>
+                                        <HBox alignment="CENTER" spacing="8">
+                                            <Label styleClass="login-btn-text" text="Log In" />
+                                            <SVGPath content="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" styleClass="login-btn-icon-svg" />
+                                        </HBox>
+                                    </graphic>
+                                </Button>
+
+                                <!-- Horizontal Divider -->
+                                <Separator styleClass="card-divider" />
+
+                                <!-- Security Information Box -->
+                                <HBox alignment="CENTER_LEFT" spacing="10" styleClass="security-info-box">
+                                    <children>
+                                        <SVGPath content="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" styleClass="security-lock-icon-svg" />
+                                        <Label styleClass="security-info-text" text="Secured with Firebase Authentication. Cloud Firestore auto-sync ready for low-connectivity milking parlors." wrapText="true" HBox.hgrow="ALWAYS" />
+                                    </children>
+                                </HBox>
+
+                            </children>
+                        </VBox>
+
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

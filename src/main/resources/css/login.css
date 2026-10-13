@@ -1,0 +1,322 @@
+/* HAMBAA Login Page Stylesheet */
+
+.login-root-pane {
+    -fx-background-color: #F8FAFC;
+    -fx-font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.main-scroll-pane {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+    -fx-fit-to-width: true;
+}
+
+.main-scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Header Bar */
+.top-header-bar {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E2E8F0;
+    -fx-border-width: 0 0 1 0;
+}
+
+.header-back-button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 6 12 6 8;
+    -fx-background-radius: 8;
+}
+
+.header-back-button:hover {
+    -fx-background-color: #F1F5F9;
+}
+
+.header-icon-svg {
+    -fx-fill: #238B63;
+}
+
+.header-title-label {
+    -fx-text-fill: #111827;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.header-profile-button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 2;
+}
+
+.profile-avatar-circle {
+    -fx-background-color: #E8F6EF;
+    -fx-background-radius: 20;
+    -fx-min-width: 38px;
+    -fx-min-height: 38px;
+    -fx-max-width: 38px;
+    -fx-max-height: 38px;
+    -fx-border-color: #238B63;
+    -fx-border-radius: 20;
+    -fx-border-width: 1.5;
+}
+
+.profile-icon-svg {
+    -fx-fill: #238B63;
+}
+
+/* Branding Section */
+.branding-section {
+    -fx-alignment: center;
+}
+
+.logo-container {
+    -fx-alignment: center;
+}
+
+.logo-background-circle {
+    -fx-fill: #E8F6EF;
+    -fx-stroke: #A7E8C9;
+    -fx-stroke-width: 2;
+}
+
+.status-dot-circle {
+    -fx-fill: #10B981;
+    -fx-stroke: #FFFFFF;
+    -fx-stroke-width: 2.5;
+}
+
+.brand-title-box {
+    -fx-alignment: center;
+}
+
+.brand-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #111827;
+    -fx-letter-spacing: 1px;
+}
+
+.herd-os-badge {
+    -fx-background-color: #E8F6EF;
+    -fx-text-fill: #238B63;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 3 8 3 8;
+    -fx-background-radius: 12;
+    -fx-border-color: #A7E8C9;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+}
+
+.brand-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #6B7280;
+    -fx-font-style: italic;
+}
+
+/* Login Card */
+.content-wrapper {
+    -fx-alignment: center;
+}
+
+.login-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 16;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 16;
+    -fx-border-width: 1;
+    -fx-padding: 28 32 28 32;
+    -fx-max-width: 460px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.06), 18, 0, 0, 8);
+}
+
+.card-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+.card-subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #6B7280;
+}
+
+.active-farm-badge {
+    -fx-background-color: #E8F6EF;
+    -fx-padding: 4 10 4 10;
+    -fx-background-radius: 14;
+    -fx-border-color: #A7E8C9;
+    -fx-border-radius: 14;
+    -fx-border-width: 1;
+}
+
+.active-dot {
+    -fx-fill: #238B63;
+}
+
+.active-farm-text {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #238B63;
+}
+
+/* Input Fields */
+.input-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #374151;
+}
+
+.text-input-field {
+    -fx-background-color: #F9FAFB;
+    -fx-border-color: #D1D5DB;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 10 14 10 14;
+    -fx-font-size: 14px;
+    -fx-text-fill: #111827;
+}
+
+.text-input-field:focused {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #238B63;
+    -fx-border-width: 1.5;
+}
+
+/* Password Input Box */
+.password-input-box {
+    -fx-background-color: #F9FAFB;
+    -fx-border-color: #D1D5DB;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 2 6 2 12;
+}
+
+.password-input-box:focused-within {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #238B63;
+    -fx-border-width: 1.5;
+}
+
+.input-icon-svg {
+    -fx-fill: #9CA3AF;
+}
+
+.inner-password-field {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 10 8 10 8;
+    -fx-font-size: 14px;
+    -fx-text-fill: #111827;
+}
+
+.eye-toggle-button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 6;
+    -fx-background-radius: 6;
+}
+
+.eye-toggle-button:hover {
+    -fx-background-color: #E5E7EB;
+}
+
+.eye-icon-svg {
+    -fx-fill: #6B7280;
+}
+
+/* Checkbox & Links */
+.remember-checkbox {
+    -fx-font-size: 13px;
+    -fx-text-fill: #4B5563;
+    -fx-cursor: hand;
+}
+
+.remember-checkbox .box {
+    -fx-background-color: #F9FAFB;
+    -fx-border-color: #D1D5DB;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+.remember-checkbox:selected .box {
+    -fx-background-color: #238B63;
+    -fx-border-color: #238B63;
+}
+
+.forgot-password-link {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #238B63;
+    -fx-underline: false;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.forgot-password-link:hover {
+    -fx-underline: true;
+    -fx-text-fill: #1d7352;
+}
+
+/* Buttons */
+.login-primary-button {
+    -fx-background-color: #238B63;
+    -fx-background-radius: 8;
+    -fx-padding: 12 24 12 24;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(35, 139, 99, 0.3), 8, 0, 0, 4);
+}
+
+.login-primary-button:hover {
+    -fx-background-color: #1d7352;
+}
+
+.login-primary-button:pressed {
+    -fx-background-color: #15533B;
+}
+
+.login-btn-text {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+}
+
+.login-btn-icon-svg {
+    -fx-fill: #FFFFFF;
+}
+
+.error-message-label {
+    -fx-text-fill: #DC2626;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.card-divider {
+    -fx-padding: 4 0 4 0;
+}
+
+.card-divider .line {
+    -fx-border-color: #F3F4F6;
+    -fx-border-width: 1 0 0 0;
+}
+
+/* Security Information Box */
+.security-info-box {
+    -fx-background-color: #F2FAF3;
+    -fx-border-color: #A7E8C9;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 10 14 10 14;
+}
+
+.security-lock-icon-svg {
+    -fx-fill: #238B63;
+}
+
+.security-info-text {
+    -fx-font-size: 11.5px;
+    -fx-text-fill: #374151;
+    -fx-line-spacing: 2px;
+}
