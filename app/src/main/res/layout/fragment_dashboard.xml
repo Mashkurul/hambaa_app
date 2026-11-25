@@ -350,9 +350,12 @@
 
                     <!-- Record Milk -->
                     <LinearLayout
+                        android:id="@+id/actionRecordMilk"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:gravity="center"
                         android:orientation="vertical">
                         <FrameLayout
@@ -377,9 +380,12 @@
 
                     <!-- Add Feed -->
                     <LinearLayout
+                        android:id="@+id/actionAddFeed"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:gravity="center"
                         android:orientation="vertical">
                         <FrameLayout
@@ -404,9 +410,12 @@
 
                     <!-- Add Expense -->
                     <LinearLayout
+                        android:id="@+id/actionAddExpense"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:gravity="center"
                         android:orientation="vertical">
                         <FrameLayout
@@ -485,6 +494,7 @@
                         android:padding="2px"
                         android:orientation="horizontal">
                         <TextView
+                            android:id="@+id/tab7D"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/bg_circle_mint"
@@ -495,6 +505,7 @@
                             android:textSize="12sp"
                             android:textStyle="bold" />
                         <TextView
+                            android:id="@+id/tab30D"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingHorizontal="10dp"
@@ -503,6 +514,7 @@
                             android:textColor="@color/text_secondary"
                             android:textSize="12sp" />
                         <TextView
+                            android:id="@+id/tabMo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingHorizontal="10dp"
@@ -658,9 +670,12 @@
 
                 <!-- Alert banner -->
                 <LinearLayout
+                    android:id="@+id/healthAlertCard"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#FFF9C4"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:padding="12dp"
                     android:orientation="vertical">
 
@@ -768,9 +783,12 @@
                             android:textColor="@color/text_white"
                             android:textSize="12sp" />
                         <TextView
+                            android:id="@+id/liveCamButton"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@color/primary"
+                            android:clickable="true"
+                            android:focusable="true"
                             android:paddingHorizontal="8dp"
                             android:paddingVertical="3dp"
                             android:text="Live Cam"
